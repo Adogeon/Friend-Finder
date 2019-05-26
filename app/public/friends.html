@@ -174,7 +174,7 @@
             var newData = {
                 name: document.querySelector("#name").value.trim(),
                 photo: document.querySelector("#photo").value.trim(),
-                answer:[
+                answers:[
                     document.querySelector("#question-1").value,
                     document.querySelector("#question-2").value,
                     document.querySelector("#question-3").value,
@@ -187,7 +187,9 @@
                     document.querySelector("#question-10").value
                 ]
             }
-            postData('/api/match', newData)
+            newData.sum = newData.answers.reduce((acc,val)=>acc+val)
+
+            postData('/api/friends', newData)
                 .then(data => {
                     document.querySelector("#friend-name").value = data.name;
                     document.querySelector("#friend-image").setAttribute("src",data.photo);
