@@ -17,3 +17,5 @@ var friend = {
         return result;
     } 
 }
+
+module.exports = friend;

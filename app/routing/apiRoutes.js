@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var Friend = require("../data/friends")
+var Friend = require("../data/friends.js")
 
 var friendArray = Friend.frdArr;
 

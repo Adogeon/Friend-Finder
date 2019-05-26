@@ -1,5 +1,4 @@
 var express = require("express");
-var path = require("path");
 var htmlRouter = require("./routing/htmlRoutes");
 var apiRouter = require("./routing/apiRoutes");
 
