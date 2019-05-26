@@ -4,14 +4,14 @@ var Friend = require("../data/friends")
 
 var friendArray = Friend.frdArr;
 
-router.post("/freonds",function(req,res) {
+router.post("/friends",function(req,res) {
     var newFriend = req.body;
     var match = Friend.findBestMatch(newFriend,friendArray);
     friendArray.push(newFriend);
     return res.json(match);
 })
 
-router.get("/freinds",function(req,res) {
+router.get("/friends",function(req,res) {
     return res.json(friendArray);
 })
 

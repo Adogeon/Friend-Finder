@@ -9,6 +9,7 @@
   "author": "Anh Dao",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.0"
+    "express": "^4.17.0",
+    "path": "^0.12.7"
   }
 }
